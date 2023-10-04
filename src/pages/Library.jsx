@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useUser } from "../Provider/UserProvider";
 import { MusicProvider } from "../Provider/MusicProvider";
 import { MusicPlayer } from "../components/music/MusicPlayer";
-import { MusicCard } from "../components/music/MusicCard";
+import MusicCard from "../components/music/MusicCard";
 
 export const Library = () => {
   const [favoriteSongs, setFavoriteSongs] = useState([]);

@@ -1,10 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { getHeaderWithProjectId } from "../utils/configs";
-import { ArticleComponent } from '../components/social/Article.jsx';
+import { ArticleComponent } from "../components/social/Article.jsx";
+
 export const Social = () => {
-  const [podcasts, setPodcasts] = useState([])
-  const [isLoading, setLoading] = useState(false)
+  const [podcasts, setPodcasts] = useState([]);
+  const [isLoading, setLoading] = useState(false);
+
   const fetchAlbums = async () => {
     setLoading(true);
     const config = getHeaderWithProjectId();
@@ -12,31 +14,25 @@ export const Social = () => {
       "https://academics.newtonschool.co/api/v1/quora/post?limit=100",
       config
     );
-    console.log('res', res.data.data);
-    setPodcasts(res.data.data)
+    console.log("res", res.data.data);
+    setPodcasts(res.data.data);
 
-    setLoading(false)
-
+    setLoading(false);
   };
 
   useEffect(() => {
     fetchAlbums();
   }, []);
-  // return <div>Podcasts</div>;
-
 
   return isLoading ? (
     <div>Loading ...</div>
-  ) : (<>
+  ) : (
+    <>
       <div>Data</div>
-    {
-      podcasts.map((post) => 
-        <ArticleComponent article={post} />
-      )
-    }
-
-
-  </>
+      {podcasts.map((post) => (
+        <ArticleComponent key={post._id} article={post} />
+      ))}
+    </>
     // podcasts && (
     //   <MusicProvider>
     //     <section className="musicList-container">

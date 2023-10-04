@@ -249,3 +249,87 @@ form {
   width: 25px;
   border-radius: 50%;
 }
+
+.login-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.login-modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.login-modal h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.login-modal p {
+  margin: 0 0 20px;
+  color: #000;
+}
+
+.login-modal button {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-modal a:hover {
+  text-decoration: underline;
+}
+
+.login-modal button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.login-modal button:hover {
+  background-color: #0056b3;
+}
+
+.comments-section {
+  margin-top: 20px;
+}
+
+.comment {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.comment-content {
+  font-weight: bold;
+}
+
+.comment-time {
+  color: #888;
+  font-size: 0.8rem;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.child-comments {
+  margin-left: 20px;
+  border-left: 1px solid #ccc;
+  padding-left: 10px;
+}
